@@ -1,0 +1,953 @@
+  [1m[35m (214.0ms)[0m  [1m[35mCREATE DATABASE "hello_rails_back_end_development" ENCODING = 'unicode'[0m
+  [1m[35m (84.1ms)[0m  [1m[35mCREATE DATABASE "hello_rails_back_end_test" ENCODING = 'unicode'[0m
+  [1m[35m (35.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3369180297042482685)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGreetings (20220920150710)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "greetings" ("id" bigserial primary key, "message" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220920150710"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (7.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-09-20 15:07:44.525779"], ["updated_at", "2022-09-20 15:07:44.525779"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3369180297042482685)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 16:13:32 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/" for ::1 at 2022-09-20 16:13:37 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 305)
+Completed 200 OK in 12ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 2671)
+
+
+Started GET "/" for ::1 at 2022-09-20 16:13:39 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 297)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 978)
+
+
+Started GET "/" for ::1 at 2022-09-20 16:31:28 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 22)
+Completed 200 OK in 2ms (Views: 1.7ms | Allocations: 270)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 16:52:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (3.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 1.6ms | ActiveRecord: 3.6ms | Allocations: 1873)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 16:52:09 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 682)
+
+
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGreeting Create (7.7ms)[0m  [1m[32mINSERT INTO "greetings" ("id", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["id", 5], ["message", "Have a nice day!"], ["created_at", "2022-09-20 15:55:28.248219"], ["updated_at", "2022-09-20 15:55:28.248219"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGreeting Create (1.6ms)[0m  [1m[32mINSERT INTO "greetings" ("id", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["id", 4], ["message", "And Build awesome UI."], ["created_at", "2022-09-20 15:56:18.601701"], ["updated_at", "2022-09-20 15:56:18.601701"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGreeting Create (0.7ms)[0m  [1m[32mINSERT INTO "greetings" ("id", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["id", 3], ["message", "Fill free to use it!"], ["created_at", "2022-09-20 15:56:37.455540"], ["updated_at", "2022-09-20 15:56:37.455540"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGreeting Create (1.0ms)[0m  [1m[32mINSERT INTO "greetings" ("id", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["id", 2], ["message", "Happy to share my new rails api!!"], ["created_at", "2022-09-20 15:56:44.609419"], ["updated_at", "2022-09-20 15:56:44.609419"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGreeting Create (1.1ms)[0m  [1m[32mINSERT INTO "greetings" ("id", "message", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["id", 1], ["message", "Hello from react and rails!"], ["created_at", "2022-09-20 15:56:51.109987"], ["updated_at", "2022-09-20 15:56:51.109987"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGreeting Load (1.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 16:58:16 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (1.0ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 79ms (Views: 77.8ms | ActiveRecord: 21.1ms | Allocations: 9482)
+
+
+Started GET "/api/v1/messages/1" for ::1 at 2022-09-20 16:58:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/1"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 16:58:35 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.7ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.7ms | Allocations: 1211)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:09:15 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (6.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 122ms (Views: 112.5ms | ActiveRecord: 47.1ms | Allocations: 4047)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-09-20 18:09:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:10:24 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.6ms | Allocations: 1083)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:11:12 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.8ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.8ms | Allocations: 1066)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:11:16 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1079)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:11:25 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.6ms | Allocations: 1066)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:11:29 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1066)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:11:51 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.5ms | Allocations: 1066)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2022-09-20 18:13:33 +0100
+Processing by Api::V1::GreetingsController#index as */*
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 1072)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2022-09-20 18:15:04 +0100
+Processing by Api::V1::GreetingsController#index as */*
+  Parameters: {"id"=>6, "message"=>"You're welcome!", "greeting"=>{"id"=>6, "message"=>"You're welcome!"}}
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.6ms | Allocations: 1070)
+
+
+Started GET "/api/v1/messages" for 127.0.0.1 at 2022-09-20 18:15:15 +0100
+Processing by Api::V1::GreetingsController#index as */*
+  Parameters: {"id"=>6, "message"=>"You're welcome!", "greeting"=>{"id"=>6, "message"=>"You're welcome!"}}
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.4ms | Allocations: 1070)
+
+
+Started POST "/api/v1/messages" for 127.0.0.1 at 2022-09-20 18:15:26 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/messages"):
+  
+Started POST "/api/v1/messages/post" for 127.0.0.1 at 2022-09-20 18:16:00 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/messages/post"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:17:21 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 6.5ms | ActiveRecord: 12.6ms | Allocations: 3410)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:17:22 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.7ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.7ms | Allocations: 1068)
+
+
+Started GET "/api/v1/messages/new" for ::1 at 2022-09-20 18:17:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/new"):
+  
+Started GET "/api/v1/post/messages/new" for ::1 at 2022-09-20 18:17:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/post/messages/new"):
+  
+Started GET "/api/v1/messages/post/new" for ::1 at 2022-09-20 18:18:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/post/new"):
+  
+Started GET "/api/v1/messages/post/new" for ::1 at 2022-09-20 18:18:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/post/new"):
+  
+Started GET "/api/v1/messages/post/new" for ::1 at 2022-09-20 18:18:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/post/new"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:18:56 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.9ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 8.0ms | ActiveRecord: 6.6ms | Allocations: 3322)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:18:57 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 1067)
+
+
+Started GET "/api/v1/messages/message/1" for ::1 at 2022-09-20 18:19:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/message/1"):
+  
+Started GET "/api/v1/messages/message=1" for ::1 at 2022-09-20 18:19:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/message=1"):
+  
+Started GET "/api/v1/messages/message%id=1" for ::1 at 2022-09-20 18:19:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/message%id=1"):
+  
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 18:21:39 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.7ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.7ms | Allocations: 1066)
+
+
+Started GET "/api/v1/messages/new" for ::1 at 2022-09-20 18:21:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/new"):
+  
+Started GET "/greetings/new" for ::1 at 2022-09-20 18:25:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/greetings/new"):
+  
+Started GET "/api/v1/messages/:id" for ::1 at 2022-09-20 18:25:50 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 404 Not Found in 23ms (ActiveRecord: 8.3ms | Allocations: 2611)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Greeting with 'id'=:id):
+  
+app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Started GET "/api/v1/messages/id" for ::1 at 2022-09-20 18:25:59 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"id"}
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 624)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Greeting with 'id'=id):
+  
+app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Started GET "/api/v1/messages/show" for ::1 at 2022-09-20 18:26:22 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mGreeting Load (0.7ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.7ms | Allocations: 546)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Greeting with 'id'=show):
+  
+app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Started GET "/api/v1/messages/2" for ::1 at 2022-09-20 18:26:29 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGreeting Load (8.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 200 OK in 18ms (Views: 1.4ms | ActiveRecord: 8.4ms | Allocations: 1641)
+
+
+Started GET "/api/v1/messages/new" for ::1 at 2022-09-20 18:26:47 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 404 Not Found in 11ms (ActiveRecord: 4.3ms | Allocations: 1967)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Greeting with 'id'=new):
+  
+app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Started GET "/api/v1/messages/new" for ::1 at 2022-09-20 18:27:41 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 404 Not Found in 14ms (ActiveRecord: 7.0ms | Allocations: 1968)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Greeting with 'id'=new):
+  
+app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Started GET "/api/v1/messages/create" for ::1 at 2022-09-20 18:27:47 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms | Allocations: 546)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Greeting with 'id'=create):
+  
+app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Started GET "/api/v1/create" for ::1 at 2022-09-20 18:28:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/create"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:28:06 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.6ms | Allocations: 2121)
+
+
+Started GET "/api/v1/messages/2" for ::1 at 2022-09-20 18:28:09 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGreeting Load (0.8ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.8ms | Allocations: 606)
+
+
+Started GET "/api/v1/messages/1" for ::1 at 2022-09-20 18:28:13 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGreeting Load (0.8ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 0.8ms | Allocations: 603)
+
+
+Started GET "/api/v1/messages/new/create" for ::1 at 2022-09-20 18:28:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/new/create"):
+  
+Started GET "/api/v1/messages/new/create" for ::1 at 2022-09-20 18:28:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/new/create"):
+  
+Started GET "/api/v1/messages/new/create" for ::1 at 2022-09-20 18:28:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/new/create"):
+  
+Started GET "/api/v1/messages/create" for ::1 at 2022-09-20 18:29:01 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mGreeting Load (0.2ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 404 Not Found in 14ms (ActiveRecord: 9.2ms | Allocations: 1967)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Greeting with 'id'=create):
+  
+app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Started GET "/api/v1/messages/create" for ::1 at 2022-09-20 18:29:33 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mGreeting Load (0.2ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 404 Not Found in 11ms (ActiveRecord: 5.0ms | Allocations: 1966)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Greeting with 'id'=create):
+  
+app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Started GET "/api/v1/messages/create" for ::1 at 2022-09-20 18:29:34 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 546)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Greeting with 'id'=create):
+  
+app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Started GET "/api/greetings/create" for ::1 at 2022-09-20 18:30:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/greetings/create"):
+  
+Started GET "/api/greetings/create" for ::1 at 2022-09-20 18:30:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/greetings/create"):
+  
+Started GET "/api/greetings/create" for ::1 at 2022-09-20 18:31:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/greetings/create"):
+  
+Started GET "/api/greetings/create" for ::1 at 2022-09-20 18:31:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/greetings/create"):
+  
+Started GET "/api/greetings/create" for ::1 at 2022-09-20 18:31:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/greetings/create"):
+  
+Started GET "/api/greetings/create" for ::1 at 2022-09-20 18:31:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/greetings/create"):
+  
+Started GET "/api/greetings/create" for ::1 at 2022-09-20 18:31:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/greetings/create"):
+  
+Started GET "/api/greetings/create" for ::1 at 2022-09-20 18:31:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/greetings/create"):
+  
+Started GET "/api/greetings/create" for ::1 at 2022-09-20 18:31:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/greetings/create"):
+  
+Started GET "/api/greetings/create" for ::1 at 2022-09-20 18:31:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/greetings/create"):
+  
+Started GET "/api/greetings/create" for ::1 at 2022-09-20 18:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/greetings/create"):
+  
+Started GET "/api/greetings/create" for ::1 at 2022-09-20 18:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/greetings/create"):
+  
+Started GET "/api/greetings/create" for ::1 at 2022-09-20 18:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/greetings/create"):
+  
+Started GET "/greetings/create" for ::1 at 2022-09-20 18:31:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/greetings/create"):
+  
+Started GET "/api/v1/messages/greetings/create" for ::1 at 2022-09-20 18:32:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/greetings/create"):
+  
+Started GET "/api/v1/messages/greetings/" for ::1 at 2022-09-20 18:32:17 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"greetings"}
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 404 Not Found in 16ms (ActiveRecord: 5.5ms | Allocations: 1967)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Greeting with 'id'=greetings):
+  
+app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Started GET "/api/v1/messages/greetings/" for ::1 at 2022-09-20 18:32:29 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"greetings"}
+  [1m[36mGreeting Load (0.2ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 404 Not Found in 15ms (ActiveRecord: 8.1ms | Allocations: 1966)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Greeting with 'id'=greetings):
+  
+app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Started GET "/api/v1/messages/greetings/create" for ::1 at 2022-09-20 18:32:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/greetings/create"):
+  
+Started GET "/api/v1/messages/2" for ::1 at 2022-09-20 18:33:11 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 200 OK in 10ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 1630)
+
+
+Started GET "/api/v1/messages/create/new" for ::1 at 2022-09-20 18:33:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/create/new"):
+  
+Started GET "/api/v1/messages/create/new" for ::1 at 2022-09-20 18:36:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/create/new"):
+  
+Started GET "/api/v1/messages/create/new" for ::1 at 2022-09-20 18:36:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/create/new"):
+  
+Started GET "/api/v1/messages/create/new" for ::1 at 2022-09-20 18:36:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/create/new"):
+  
+Started GET "/api/v1/messages/5/update" for ::1 at 2022-09-20 18:40:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/5/update"):
+  
+Started GET "/api/v1/messages/5" for ::1 at 2022-09-20 18:40:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/5"):
+  
+Started GET "/api/v1/messages/3" for ::1 at 2022-09-20 18:40:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/3"):
+  
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 18:40:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 18:40:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 18:40:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 18:41:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 18:41:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 18:41:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages/5" for ::1 at 2022-09-20 18:42:24 +0100
+Processing by Api::V1::GreetingsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 200 OK in 34ms (Views: 0.9ms | ActiveRecord: 20.8ms | Allocations: 3040)
+
+
+Started GET "/api/v1/messages/5/" for ::1 at 2022-09-20 18:42:59 +0100
+Processing by Api::V1::GreetingsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mGreeting Load (0.7ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 200 OK in 24ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 601)
+
+
+Started GET "/api/v1/messages/5" for ::1 at 2022-09-20 18:43:06 +0100
+Processing by Api::V1::GreetingsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 600)
+
+
+Started GET "/api/v1/messages/5/" for ::1 at 2022-09-20 18:43:31 +0100
+Processing by Api::V1::GreetingsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 600)
+
+
+Started GET "/api/v1/messages/5/new" for ::1 at 2022-09-20 18:43:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/5/new"):
+  
+Started GET "/api/v1/messages/5/" for ::1 at 2022-09-20 18:44:00 +0100
+Processing by Api::V1::GreetingsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 600)
+
+
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 18:44:07 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.5ms | Allocations: 1095)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:44:13 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.3ms | Allocations: 1064)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:44:17 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms | Allocations: 1064)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:44:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:46:24 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 7.9ms | ActiveRecord: 6.1ms | Allocations: 3319)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:46:25 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 1065)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:46:25 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 1064)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:47:03 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.4ms | Allocations: 1064)
+
+
+Started GET "/api/v1/messages/4" for ::1 at 2022-09-20 18:47:07 +0100
+Processing by Api::V1::GreetingsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 811)
+
+
+Started GET "/api/v1/messages/4" for ::1 at 2022-09-20 18:47:35 +0100
+Processing by Api::V1::GreetingsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mGreeting Load (0.2ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `show'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 4.6ms | Allocations: 3002)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:47:42 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 1096)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:53:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:53:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:54:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:54:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 18:54:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:03:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:03:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:03:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:03:32 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:03:55 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:03:56 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:04:49 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:04:50 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:04:50 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:04:59 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:04:59 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:05:00 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:05:16 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:05:17 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:05:37 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:05:38 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages/1" for ::1 at 2022-09-20 19:05:59 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages/5/" for ::1 at 2022-09-20 19:06:17 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 19:06:20 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 19:06:24 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 19:07:12 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 19:07:13 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::MessagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 19:09:13 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.9ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:9:in `index'
+Completed 200 OK in 51ms (Views: 47.5ms | ActiveRecord: 14.0ms | Allocations: 6124)
+
+
+Started GET "/api/v1/messages/5/destroy" for ::1 at 2022-09-20 19:10:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/5/destroy"):
+  
+Started GET "/api/v1/messages/5/" for ::1 at 2022-09-20 19:10:13 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGreeting Load (0.2ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:45:in `set_greeting'
+Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 11.3ms | Allocations: 3100)
+
+
+Started GET "/api/v1/messages/5" for ::1 at 2022-09-20 19:10:26 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:45:in `set_greeting'
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 608)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 19:10:30 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.4ms | Allocations: 1099)
+
+
+Started GET "/api/v1/messages/5/" for ::1 at 2022-09-20 19:10:50 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:45:in `set_greeting'
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.5ms | Allocations: 608)
+
+
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 19:11:06 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.5ms | Allocations: 1067)
+
+
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 19:11:09 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.5ms | Allocations: 1067)
+
+
