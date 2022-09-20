@@ -1,9 +1,9 @@
 class Api::V1::GreetingsController < ApplicationController
   # This is a before action that is called before the show, update, and destroy actions. It is setting the @greeting
   # variable to the greeting that is being requested.
-  before_action :set_greeting, only: [:show, :update, :destroy]
+  before_action :set_greeting, only: %i[show update destroy]
 
- # The index function is a GET request that returns all the greetings in the database
+  # The index function is a GET request that returns all the greetings in the database
   def index
     @greetings = Greeting.all
     render json: @greetings
