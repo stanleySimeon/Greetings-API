@@ -5,7 +5,7 @@ class Api::V1::GreetingsController < ApplicationController
 
   # The index function is a GET request that returns all the greetings in the database
   def index
-    @greetings = Greeting.all
+    @greetings = Greeting.all.sample
     render json: @greetings
   end
 
