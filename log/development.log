@@ -13659,3 +13659,365 @@ Processing by Api::V1::GreetingsController#index as HTML
 Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 686)
 
 
+Started GET "/" for ::1 at 2022-09-22 18:21:18 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.6ms | Allocations: 165)
+Completed 200 OK in 2ms (Views: 1.4ms | Allocations: 761)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:23:29 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 520)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:23:29 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 1ms (Views: 0.8ms | Allocations: 201)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:23:30 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 2ms (Views: 1.5ms | Allocations: 190)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:09 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 1.6ms | Allocations: 159)
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 641)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:09 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.2ms | Allocations: 13)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 202)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:10 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 0ms (Views: 0.4ms | Allocations: 190)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:16 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 1.2ms | Allocations: 159)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 641)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:16 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 202)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:21 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 1.4ms | Allocations: 159)
+Completed 200 OK in 5ms (Views: 4.2ms | Allocations: 641)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:21 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 1ms (Views: 1.1ms | Allocations: 202)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:38 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.5ms | Allocations: 159)
+Completed 200 OK in 2ms (Views: 1.7ms | Allocations: 641)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:39 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 202)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:42 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 1.1ms | Allocations: 159)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 641)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:43 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 1ms (Views: 0.8ms | Allocations: 202)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:43 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.0ms | Allocations: 13)
+Completed 200 OK in 0ms (Views: 0.3ms | Allocations: 190)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:54 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 1.2ms | Allocations: 159)
+Completed 200 OK in 3ms (Views: 2.3ms | Allocations: 641)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:54 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 202)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:24:54 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 190)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:25:04 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.7ms | Allocations: 158)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 640)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:25:04 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 202)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:25:32 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.7ms | Allocations: 159)
+Completed 200 OK in 2ms (Views: 1.9ms | Allocations: 641)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:25:59 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 1.4ms | Allocations: 160)
+Completed 200 OK in 4ms (Views: 3.6ms | Allocations: 654)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:26:00 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 202)
+
+
+Started GET "/" for ::1 at 2022-09-22 18:26:04 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb
+  Rendered welcome/index.html.erb (Duration: 0.0ms | Allocations: 13)
+Completed 200 OK in 0ms (Views: 0.3ms | Allocations: 190)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-22 18:26:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-22 18:26:18 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 0.4ms | ActiveRecord: 8.1ms | Allocations: 5745)
+
+
+Started GET "/api/v1/messages/" for ::1 at 2022-09-22 18:26:27 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 686)
+
+
+Started GET "/api/v1/messages/" for ::1 at 2022-09-22 18:26:29 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 686)
+
+
+Started GET "/api/v1/messages/" for ::1 at 2022-09-22 18:26:30 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 685)
+
+
+Started GET "/api/v1/messages/" for ::1 at 2022-09-22 18:26:30 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.8ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 686)
+
+
+Started GET "/api/v1/messages/" for ::1 at 2022-09-22 18:26:31 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 686)
+
+
+Started GET "/api/v1/messages/" for ::1 at 2022-09-22 18:26:31 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.7ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 686)
+
+
+Started GET "/api/v1/messages/" for ::1 at 2022-09-22 18:26:32 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 686)
+
+
+Started GET "/api/v1/messages/" for ::1 at 2022-09-22 18:26:32 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 686)
+
+
+Started GET "/api/v1/messages/all" for ::1 at 2022-09-22 18:26:36 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"all"}
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:21:in `set_greeting'
+Completed 404 Not Found in 7ms (ActiveRecord: 1.3ms | Allocations: 807)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Greeting with 'id'=all):
+  
+app/controllers/api/v1/greetings_controller.rb:21:in `set_greeting'
+Started GET "/api/v1/message" for ::1 at 2022-09-22 18:26:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/message"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-22 18:26:43 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 685)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-22 18:26:45 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 685)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-22 18:26:45 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 686)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-22 18:26:45 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 685)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-22 18:26:46 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.7ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 685)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-22 18:26:46 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 686)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-22 18:27:02 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.2ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 2.6ms | ActiveRecord: 7.1ms | Allocations: 3380)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-22 18:27:21 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 662)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Started GET "/api/v1/messages" for ::1 at 2022-09-22 18:28:00 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.2ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 2816)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-22 18:28:01 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 631)
+
+
+Started GET "/api/v1/messages/1" for ::1 at 2022-09-22 18:28:08 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:21:in `set_greeting'
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 866)
+
+
+Started GET "/api/v1/messages/1" for ::1 at 2022-09-22 18:28:10 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:21:in `set_greeting'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 610)
+
+
+Started GET "/api/v1/messages/1" for ::1 at 2022-09-22 18:28:10 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:21:in `set_greeting'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 610)
+
+
+Started GET "/api/v1/messages/1" for ::1 at 2022-09-22 18:28:11 +0100
+Processing by Api::V1::GreetingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" WHERE "greetings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:21:in `set_greeting'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 610)
+
+
