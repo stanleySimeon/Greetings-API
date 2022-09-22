@@ -2,14 +2,20 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: Martial@5009
 
 development:
   <<: *default
   database: hello_rails_back_end_development
+  username: postgres
+  password: Martial@5009
 
 test:
   <<: *default
   database: hello_rails_back_end_test
+  username: postgres
+  password: Martial@5009
 
 production:
   <<: *default
