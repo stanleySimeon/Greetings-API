@@ -44524,3 +44524,59 @@ Processing by Api::V1::GreetingsController#index as JSON
 Completed 200 OK in 18ms (Views: 11.0ms | ActiveRecord: 4.8ms | Allocations: 6875)
 
 
+Started GET "/api/v1/messages" for ::1 at 2022-09-23 02:40:19 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.9ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:9:in `index'
+Completed 200 OK in 65ms (Views: 60.6ms | ActiveRecord: 8.0ms | Allocations: 7561)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-23 02:40:19 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.8ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.8ms | Allocations: 4589)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-23 02:40:20 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.4ms | Allocations: 4589)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-23 02:40:20 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 4589)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-23 02:40:20 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:9:in `index'
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.5ms | Allocations: 4589)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-23 02:40:20 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.6ms | Allocations: 4589)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-23 02:40:34 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 0.5ms | ActiveRecord: 10.2ms | Allocations: 3454)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-23 02:40:34 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1125)
+
+
