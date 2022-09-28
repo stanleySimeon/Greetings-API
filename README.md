@@ -1,8 +1,8 @@
 # hello-rails-back-end
 This exercise is going to have you create a Rails back-end api.
 
-# Link to the Rect App
-https://github.com/stanleySimeon/hello-react-front-end.git
+# Link to the React App
+[Front end](https://github.com/stanleySimeon/hello-react-front-end.git)
 
 ## Built With
 
