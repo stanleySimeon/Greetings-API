@@ -1,60 +1,173 @@
-# hello-rails-back-end
-This exercise is going to have you create a Rails back-end api.
+<a name="readme-top"></a>
 
-# Link to the React App
-[Front end](https://github.com/stanleySimeon/hello-react-front-end.git)
+<div align="center">
+  <h3><b>GREETINGS API</b></h3>
+</div>
 
-## Built With
+<!-- TABLE OF CONTENTS -->
 
-- Ruby on Rails
+# 📗 Table of Contents
 
-## Prerequisites
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
-- Ruby
-- Ruby on Rails
-- PostgreSQL
+<!-- PROJECT DESCRIPTION -->
 
-## Install
+# 📖 GREETINGS API <a name="about-project"></a>
 
-- Ruby
-- Ruby on Rails(as a gem)
-- Postgresql database
+**GREETINGS API** is a simple API endpoint that allows developers to find greetings randomly about their programming language of choice.
 
-## Getting Started
+## 🛠 Built With <a name="built-with"></a>
 
-To get a local copy of the app, run the following commands in your terminal:
-- `git clone https://github.com/stanleySimeon/hello-rails-back-end.git`
-- `cd /hello-rails-back-end`
-- `bundle install`
+- [Ruby on rails](https://rubyonrails.org/)
+- [PostgreSQL](https://www.postgresql.org/)
 
-Run the following commands to run the app
+### Tech Stack <a name="tech-stack"></a>
 
-- `rails db:create`
-- `rails db:migrate`
-- `rails s`
+<details>
+  <summary>Server</summary>
+    <ul>
+      <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    </ul>
+    <summary>Deploy</summary>
+    <ul>
+      <li><a href="https://render.com/">Render</a></li>
+    </ul>
+</details>
 
-In your browser, go to
+<!-- LIVE DEMO -->
 
-- `http://localhost:3000/api/v1/messages`
+## 🚀 Live Demo <a name="live-demo"></a>
 
-## Authors
+- [Live Demo Link](https://rails-w6v1.onrender.com/api/v2/messages)
 
- 👤 **Stanley SIMEON**
-- GitHub: [Github](https://github.com/stanleySimeon)
-- Twitter: [Twitter](https://twitter.com/mstanleyme)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/stanleysimeon/)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- GETTING STARTED -->
 
-## 🤝 Contributing
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+
+```sh
+ npm
+ Ruby
+ Gem
+ Rspec
+```
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+  cd your_folder_name (where you want to clone the project)
+  git clone https://github.com/stanleySimeon/Greetings-API.git
+```
+
+### Install
+
+Install this project with:
+
+```sh
+  cd Greetings-API
+  bundle install
+  npm install
+  rake db:create
+  rake db:migrate
+  rake db:seed
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  rails s
+  and
+  open http://localhost:3000
+```
+
+### Run tests
+
+To run the tests, execute the following command:
+
+```sh
+  rspec
+```
+
+### Deployment
+
+You can deploy this project using:
+
+  ```sh
+    render.com
+  ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Author**
+
+- GitHub: [@stanleySimeon](https://github.com/stanleySimeon)
+- Twitter: [@mstanleyme](https://twitter.com/mstanleyme)
+- LinkedIn: [@stanleysimeon](https://linkedin.com/in/stanleysimeon)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/stanleySimeon/hello-rails-back-end/issues).
+Feel free to check the [issues page](../../issues/).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
+<!-- SUPPORT -->
 
-## 📝 License
+## ⭐️ Show your support <a name="support"></a>
 
-This project is [MIT](./LICENSE) licensed
+If you like this project, please give it a ⭐️!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- I would like to thank the following people:
+
+  - [@microverse](https://github.com/microverseinc) for the opportunity to learn and grow as a developer.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
